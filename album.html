@@ -127,6 +127,7 @@
   </div>
   <script type="text/javascript" src="res/layui/layui.js"></script>
   <script type="text/javascript">
+		$(function(){
    layui.config({
    	base: 'res/js/util/'
    }).use(['element','form','layer','menu'],function(){
@@ -134,6 +135,7 @@
    	menu.init();
 		menu.submit();
    })
+	 }
 	
   </script>
 </body>
