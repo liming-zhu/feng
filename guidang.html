@@ -134,14 +134,14 @@
   <script type="text/javascript" src="res/layui/layui.js"></script>
   <script type="text/javascript">
 		$(function(){
-   layui.config({
-   	base: 'res/js/util/'
-   }).use(['element','form','layer','menu'],function(){
-   	element = layui.element,form = layui.form,layer = layui.layer,menu = layui.menu;
-   	menu.init();
-		menu.submit();
-   })
-	 }
+				layui.config({
+					base: 'res/js/util/'
+				}).use(['menu'],function(){
+					menu = layui.menu;
+					menu.init();
+					menu.submit();
+				})
+		}) 
 
   </script>
 </body>

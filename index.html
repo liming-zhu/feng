@@ -536,9 +536,10 @@
 		$(function(){
 		layui.config({
 			base: 'res/js/util/'
-		}).use(['element','form','layer','menu'],function(){
-			element = layui.element,form = layui.form,layer = layui.layer,menu = layui.menu;
+		}).use(['menu'],function(){
+			menu = layui.menu;
 			menu.init();
+			menu.submit();
 		})
     /*静态分页*/
     Paging(1); 
