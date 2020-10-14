@@ -539,7 +539,6 @@
 		}).use(['menu'],function(){
 			menu = layui.menu;
 			menu.init();
-			menu.submit();
 		})
     /*静态分页*/
     Paging(1); 
@@ -572,7 +571,6 @@ function Paging(index){
         if(next >pageNumber){ next = pageNumber ;}
         pageHTML += '<a class="p_next js_page" href="javascript:Paging('+next+')" title="下一页">下一页  </a>';        
         pageHTML += '<a class="p_last js_page" href="javascript:Paging('+pageNumber+')" title="尾页">  尾页</a>';    
-        /* pageHTML += '<a οnclick="showAll()" title="显示全部" style="margin-left:10px;cursor:pointer;">显示全部</a>';  */        
     if(totalPage == 0){
         $("#demo").html('');   
     }else {
