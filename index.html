@@ -531,14 +531,15 @@
   </div>
   <script type="text/javascript" src="res/layui/layui.js"></script>
   <script type="text/javascript">
-    layui.config({
-    	base: 'res/js/util/'
-    }).use(['element','form','layer','menu'],function(){
-    	element = layui.element,form = layui.form,layer = layui.layer,menu = layui.menu;
-    	menu.init();
-    })
+    
 		
 		$(function(){
+		layui.config({
+			base: 'res/js/util/'
+		}).use(['element','form','layer','menu'],function(){
+			element = layui.element,form = layui.form,layer = layui.layer,menu = layui.menu;
+			menu.init();
+		})
     /*静态分页*/
     Paging(1); 
 }) 
@@ -578,15 +579,7 @@ function Paging(index){
     }
  }    
 
-  /*显示全部*/
-function  showAll(){  
-    for(var i=0;i<$('#record').children().length;i++){
-        $('#record').children().eq(i).attr("style","display:");   
-    }  
-     $("#demo").html(
-             '<span style="margin-right:8px;">共'+$('#record').children().length+'条</span>'+
-             '<a οnclick="showPage()" title="分页显示" style="cursor:pointer;">分页显示</a>');   
-}
+ 
   /*分页显示*/
 function showPage(){  
     Paging(1)  
